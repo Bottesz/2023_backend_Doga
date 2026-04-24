@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('teszts', function (Blueprint $table) {
             $table->id();
-            $table->string()
+            $table->string('kerdes');
+            $table->string('v1');
+            $table->string('v2');
+            $table->string('v3');
+            $table->string('v4');
+            $table->string('helyes')->default('v1');
+            $table->foreignId('kategoriaId')->references('kategoriaId')->on('kategorias');
             $table->timestamps();
         });
     }

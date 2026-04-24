@@ -13,7 +13,7 @@ class KategoriaController extends Controller
      */
     public function index()
     {
-        //
+        return Kategoria::all();
     }
 
     /**

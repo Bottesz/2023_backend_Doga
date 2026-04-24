@@ -9,4 +9,10 @@ class teszt extends Model
 {
     /** @use HasFactory<\Database\Factories\TesztFactory> */
     use HasFactory;
+
+    protected $table='teszts';
+
+    public function kategoria(){
+         return $this->belongsTo(Kategoria::class,'kategoriaId');
+    }
 }
